@@ -94,7 +94,7 @@ buildImage()
     prepareEnvironment "$branchName" "$deviceName"
 
     local otaParam=""
-    if [ -n "$otaURL"]
+    if [ -n "$otaURL" ]
     then
         otaParam="-e \"OTA_URL=${otaURL}\""
     fi

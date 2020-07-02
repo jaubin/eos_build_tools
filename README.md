@@ -1,9 +1,7 @@
-# eos_j5y17lte
-/e/ OS build scripts for Samsung Galaxy J5 2017 LTE. Check https://e.foundation
+# eos_build_tools
+/e/ OS build script for your images. Check https://e.foundation
 
-# DISCLAIMER
-
-These script build an image of /e/OS for Galaxy J5 2017 LTE using LineageOS 15.1 (Android Oreo). However I could *not* test the image as of now because I cannot afford risking to brick my phone. So use it at your own risk. However I'd be very interested in getting feedbacks about it.
+This script is intended to make it easier to build /e/OS images and to share your tweaks in the form of ```roomservice.xml``` files.
 
 # How to build the image by yourself
 
@@ -17,13 +15,21 @@ The build will *not* work on Windows. For macOS I cannot guarantee. The build is
 * You will need at least 120 GB of HDD space to to the build. A good internet connection is *strongly* advised.
 * You will need at least 6 GB of free RAM.
 
-## Running the build
+## Using the script
 
-Run command :
+To get the usage instructions of this script run command :
 
-    ./build_image_with_local_manifest.sh <eOS_branch> j5y17lte
+    build_eos_image.sh -h
 
-As of now we only tested with branch ```v0.9-oreo``` and it won't work with any other branch unless you update the content of file ```srv/e/local_manifests/roomservice.xml```. However the sh scripts themselves are reusable for any device so that you don't have to type by yourself the rather cumbersome Docker commands.
+To build an image :
+
+    build_eos_image.sh -b <eOS_branch> -d <adb_device_name> [ -u <ota_url> ]
+
+## Using a custom roomservice.xml
+
+In order to use a custom ```roomservice.xml``` store it as file name ```roomservices/<eos_Branch>/<adb_device_name>``` under the scscript directory. A valid example is for device j5y17lte which is Samsung Galaxy J5 2017, built against /e/OS branch v0.9-oreo.
+
+Then you're strongly encouraged to share your ```roomservice.xml``` by creating a pull request to this repo. This will make sure your build is reproducible on any host which is better for reliability, and will also help folks in case they need to maintain your image if you're not available to do so.
 
 ## Known issues with the build
 

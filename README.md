@@ -5,7 +5,7 @@ This script is intended to make it easier to build /e/OS images and to share you
 
 # How to build the image by yourself
 
-The build will *not* work on Windows. For macOS I cannot guarantee. The build is known to work with Debian.
+The build will *not* work on Windows. For macOS I cannot guarantee. The build is known to work with Debian and will also probably work with any other Linux distro since it does not use Debian specific stuff.
 
 ## Prerequisites
 

@@ -27,7 +27,7 @@ To build an image :
 
 ## Using a custom roomservice.xml
 
-In order to use a custom ```roomservice.xml``` store it as file name ```roomservices/<eos_Branch>/<adb_device_name>``` under the scscript directory. A valid example is for device j5y17lte which is Samsung Galaxy J5 2017, built against /e/OS branch v0.9-oreo.
+In order to use a custom ```roomservice.xml``` store it as file name ```roomservices/<eos_Branch>/<adb_device_name>``` under the script directory. A valid example is for device j5y17lte which is Samsung Galaxy J5 2017, built against /e/OS branch v0.9-oreo.
 
 Then you're strongly encouraged to share your ```roomservice.xml``` by creating a pull request to this repo. This will make sure your build is reproducible on any host which is better for reliability, and will also help folks in case they need to maintain your image if you're not available to do so.
 
